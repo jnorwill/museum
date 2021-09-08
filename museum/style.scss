@@ -290,6 +290,35 @@ p {
     width: 100%;
   }
 }
+.explore {
+  padding: 75px 0 70px;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  &__text-container {
+    max-width: 659px;
+  }
+  &__img-container{
+margin-top: 14px;
+  }
+  &__title {
+    border-bottom: #710707 3px solid;
+    padding-bottom: 25px;
+    margin-bottom: 75px;
+  }
+  &__text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+    margin-top: 25px;
+    &_yellow {
+      color: #9d8665;
+    }
+  }
+}
 .footer {
   font-family: Roboto;
   font-style: normal;
