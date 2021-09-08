@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>museum</title>
     <link rel="stylesheet" href="./compressed/css/style.min.css">
-    <link rel="icon" href="./assets/svg/icon.svg">
+    <link rel="icon" href="../../assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet">
   </head>
   <body>
     <header class="header-wrapper dark-bg">
@@ -28,6 +37,49 @@
         </nav>
       </div>
     </header>
+    <main>
+      <section class="welcome dark-bg">
+        <div class="welcome-container">
+          <div class="welcome__text-container">
+            <h2 class="title welcome__title">Welcome <br> to the Louvre</h2>
+            <p class="welcome__subtitle">From the castle to the museum</p>
+            <button class="welcome__button">Discover the Louvre</button>
+          </div>
+          <div class="welcome__slider slider">
+            <div class="slider__gallery">
+              <div class="slider__gallery_shadow"></div>
+              <div>
+                <img src="../../assets/img/1.jpg" alt="Djokonda">
+                <img class="hidden" src="../../assets/img/2.jpg" alt="">
+                <img class="hidden" src="../../assets/img/3.jpg" alt="">
+                <img class="hidden" src="../../assets/img/4.jpg" alt="">
+                <img class="hidden" src="../../assets/img/5.jpg" alt="">
+              </div>
+
+            </div>
+            <div class="slider__pagination">
+              <div class="slider__numbers">
+                <div>01</div>
+                <div>|</div>
+                <div>05</div>
+              </div>
+              <div class="slider__squares">
+                <div class="squares__square squares__square_beige"></div>
+                <div class="squares__square"></div>
+                <div class="squares__square"></div>
+                <div class="squares__square"></div>
+                <div class="squares__square"></div>
+              </div>
+              <div class="slider__arrows">
+                <button class="slider__arrow"></button>
+                <button class="slider__arrow slider__arrow_right"></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer dark-bg">
       <div class="footer__container">
         <div class="logo-and-nav-container">
@@ -39,15 +91,19 @@
             <ul class="navigation footer__navigation">
               <li>
                 <ul>
-                  <li class="footer__navigation_margin"><a href="#visiting" class="navigation__link">Visiting</a></li>
-                  <li class="footer__navigation_margin"><a href="#explore" class="navigation__link">Explore</a></li>
+                  <li class="footer__navigation_margin"><a href="#visiting"
+                      class="navigation__link">Visiting</a></li>
+                  <li class="footer__navigation_margin"><a href="#explore"
+                      class="navigation__link">Explore</a></li>
                   <li><a href="#video" class="navigation__link">Video</a></li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li class="footer__navigation_margin"><a href="#gallery" class="navigation__link">Gallery</a></li>
-                  <li class="footer__navigation_margin"><a href="#tickets" class="navigation__link">Tickets</a></li>
+                  <li class="footer__navigation_margin"><a href="#gallery"
+                      class="navigation__link">Gallery</a></li>
+                  <li class="footer__navigation_margin"><a href="#tickets"
+                      class="navigation__link">Tickets</a></li>
                   <li><a href="#contacts" class="navigation__link">Contacts</a></li>
                 </ul>
               </li>

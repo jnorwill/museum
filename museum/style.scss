@@ -1,5 +1,4 @@
 body {
-  color: #ffffff;
   margin: 0 auto;
 }
 .hidden {
@@ -13,7 +12,14 @@ ul {
   padding: 0;
   list-style: none;
 }
+h2 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
 .dark-bg {
+  color: #ffffff;
   background: #030303;
 }
 .navigation {
@@ -24,7 +30,24 @@ ul {
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 2px;
+    font-family: "Roboto";
   }
+}
+.navigation__link:hover{
+  cursor: pointer;
+  color: #9D8665;
+}
+.navigation__link:active{
+  color:#7E6C51;
+}
+.title {
+  font-family: Forum;
+  font-style: normal;
+font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 .header {
   margin: 0 auto;
@@ -46,10 +69,20 @@ ul {
     height: 26px;
   }
   &__text {
-    // letter-spacing: 5px;
+    font-family: Forum;
+    letter-spacing: 5px;
     text-transform: uppercase;
     font-size: 28px;
     line-height: 31px;
+  }
+}
+.logo:hover{
+  cursor: pointer;
+  .logo__img{
+    filter: invert(58%) sepia(15%) saturate(710%) hue-rotate(356deg) brightness(150%) contrast(91%);
+  }
+  .logo__text{
+    color: #d2b183;
   }
 }
 .header__navigation {
@@ -58,6 +91,127 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+
+.welcome-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.welcome__text-container {
+  position: relative;
+  padding: 150px 0 270px;
+  width: 600px;
+  z-index: 2;
+}
+.welcome__subtitle {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+  margin: 25px 0 75px;
+}
+.welcome__button {
+  background: #710707;
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  border: none;
+  width: 360px;
+  height: 75px;
+  color: #ffffff;
+}
+.welcome__button:hover{
+  background: #9D8665;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.welcome__slider {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.slider__gallery{
+overflow: hidden;
+position: relative;
+}
+.slider__gallery_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background: #030303;
+  box-shadow: 0px 0px 140px 180px #030303;
+  z-index: 2;
+}
+
+.slider__pagination,
+.slider__numbers,
+.slider__squares,
+.slider__arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider__pagination {
+  position: relative;
+  z-index: 2;
+  width: 450px;
+  background: #030303;
+  margin-top: -65px;
+  padding: 40px 75px;
+}
+.slider__numbers {
+  width: 76px;
+  height: 40px;
+  font-family: Roboto;
+font-size: 22px;
+line-height: 40px;
+text-transform: uppercase;
+}
+.slider__squares {
+  width: 180px;
+}
+.squares__square {
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+}
+.squares__square:hover{
+  background: #d2b183;
+  cursor: pointer;
+}
+.squares__square_beige {
+  background: #d2b183;
+}
+.slider__arrows {
+  width: 80px;
+}
+.slider__arrow {
+  background: url(../../assets/svg/arrow.svg) 50% 50% no-repeat;
+  height: 8px;
+  width: 30px;
+  padding: 10px 0;
+  border: none;
+}
+.slider__arrow:hover{
+  cursor: pointer;
+  filter: invert(58%) sepia(15%) saturate(710%) hue-rotate(356deg) brightness(150%) contrast(91%);
+  transition: 0.5s;
+}
+.slider__arrow_right {
+  transform: rotate(180deg);
+}
+
 .footer {
   font-family: Roboto;
   font-style: normal;
@@ -95,8 +249,8 @@ ul {
   justify-content: space-between;
   margin-top: 5px;
 }
-.footer__navigation_margin{
-margin-bottom: 25px;
+.footer__navigation_margin {
+  margin-bottom: 25px;
 }
 .social-net {
   display: flex;
@@ -111,4 +265,23 @@ margin-bottom: 25px;
   border: solid 1px #666666;
   border-radius: 50%;
   display: block;
+}
+.social-net__link:hover{
+  border: solid 1px #9D8665;
+  filter: invert(58%) sepia(15%) saturate(710%) hue-rotate(356deg) brightness(150%) contrast(91%);
+}
+.youtube{
+  background: url(../../assets/svg/youtube.svg) no-repeat 50% 50%;
+}
+.instagram{
+  background: url(../../assets/svg/instagram.svg) no-repeat 50% 50%;
+}
+.facebook{
+  background: url(../../assets/svg/facebook.svg) no-repeat 50% 50%;
+}
+.twitter{
+  background: url(../../assets/svg/twitter.svg) no-repeat 50% 50%;
+}
+.pinterest{
+  background: url(../../assets/svg/pinterest.svg) no-repeat 50% 50%;
 }
