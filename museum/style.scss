@@ -27,6 +27,10 @@ p {
   color: #ffffff;
   background: #030303;
 }
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .navigation {
   &__link {
     padding: 10px;
@@ -56,8 +60,6 @@ p {
   text-transform: uppercase;
 }
 .header {
-  margin: 0 auto;
-  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,8 +103,6 @@ p {
 }
 
 .welcome-container {
-  max-width: 1440px;
-  margin: 0 auto;
   position: relative;
   padding: 0 20px;
 }
@@ -226,8 +226,6 @@ p {
 }
 
 .visiting {
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 75px 20px;
   &__title {
     border-bottom: #710707 3px solid;
@@ -293,8 +291,6 @@ p {
 }
 .explore {
   padding: 75px 20px 70px;
-  margin: 0 auto;
-  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   &__text-container {
@@ -321,9 +317,7 @@ p {
   }
 }
 .video {
-  max-width: 1440px;
   padding: 75px 20px;
-  margin: 0 auto;
   &__title {
     color: #9d8665;
   }
@@ -473,6 +467,39 @@ p {
     left: -30px;
   }
 }
+.gallery {
+  padding: 75px 20px 0;
+  overflow: hidden;
+  height: 2126px;
+}
+.gallery__list {
+  position: relative;
+  height: 2850px;
+  display: flex;
+  flex-direction: column;
+  width: 1476px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 102px;
+  img {
+    margin-top: 24px;
+    width: 456px;
+    display: block;
+  }
+  img:nth-child(6) {
+    margin-top: -25px;
+  }
+}
+.gallery__shadow{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #030303;
+  box-shadow: 0px 0px 140px 180px #fff;
+  z-index: 2;
+}
 .footer {
   font-family: Roboto;
   font-style: normal;
@@ -490,9 +517,7 @@ p {
 }
 .footer__container {
   display: flex;
-  max-width: 1440px;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 0 20px;
   flex-wrap: wrap;
 }
