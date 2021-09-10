@@ -470,6 +470,7 @@ p {
   padding: 75px 20px 0;
   overflow: hidden;
   height: 2126px;
+  position: relative;
 }
 .gallery__list {
   position: relative;
@@ -496,7 +497,7 @@ p {
   left: 0;
   height: 1px;
   background: #030303;
-  box-shadow: 0px 0px 140px 180px #fff;
+  box-shadow: 0px 0px 140px 180px #030303;
   z-index: 2;
 }
 .tickets {
@@ -523,6 +524,9 @@ p {
     font-size: 28px;
     line-height: 33px;
     margin-bottom: 25px;
+  }
+  &__container_left {
+    text-align: left;
   }
   &__container_right {
     text-align: right;
@@ -603,6 +607,36 @@ p {
   background: url(../../assets/img/parallax.jpg) 50% 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+.contacts {
+  padding: 75px 20px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    margin: 0 0 50px;
+  }
+  &__link {
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000000;
+    border: none;
+    margin-top: 25px;
+  }
+  &__map {
+    width: 960px;
+    height: 620px;
+  }
 }
 .footer {
   font-family: Roboto;

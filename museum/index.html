@@ -219,7 +219,7 @@
           <img src="./assets/img/tickets.jpg" alt="tickets">
           <form class="tickets__form" action="#">
             <div class="form">
-              <div>
+              <div class="form__container_left">
                 <p class="form__title">Ticket Type</p>
                 <input class="form__radio" type="radio" id="radio1"
                   name="type_of_exhibition"
@@ -247,7 +247,7 @@
                     name="senior65" value="1">
                   <button onclick="this.previousElementSibling.stepUp()">+</button>
                 </div>
-                <p class="form__text_bolt">Total €</p>
+                <p class="form__text_bolt">Total €220</p>
               </div>
             </div>
             <input class="form__submit" type="submit" value="Buy Now">
@@ -255,6 +255,28 @@
         </div>
       </section>
       <div class="parallax"></div>
+      <section class="contacts container">
+        <h2 class="contacts__title title border-bottom">Contacts</h2>
+        <div class="contacts__container">
+          <div>
+            <h4 class="contacts__subtitle">Palais Royal <br> Musee du Louvre</h4>
+            <ul>
+              <li><a class="contacts__link"
+                  href="https://goo.gl/maps/XaVPc3SoNzsibqBy8">address:75001
+                  Paris, France</a></li>
+              <li><a class="contacts__link" href="tel:+330140205050">phone:+33(0)
+                  1 40 20 50 50</a></li>
+              <li><a class="contacts__link" href="mailto:info@louvre.fr">mail:info@louvre.fr</a></li>
+            </ul>
+          </div>
+          <div class="contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20998.4255049562!2d2.318433076479192!3d48.861963274406854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e25d0482b3d%3A0x1c0b82c6e1d85100!2zNzUwMDEg0J_QsNGA0LjQtiwg0KTRgNCw0L3RhtC40Y8!5e0!3m2!1sru!2sby!4v1631283942959!5m2!1sru!2sby"
+              width="960" height="620" style="border:0;" allowfullscreen=""
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer dark-bg">
       <div class="footer__container container">
