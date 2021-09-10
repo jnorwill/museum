@@ -79,7 +79,7 @@
         </div>
       </section>
       <section class="visiting container">
-        <h2 class="visiting__title title">Virtual tour</h2>
+        <h2 class="visiting__title title border-bottom">Virtual tour</h2>
         <div class="visiting__cards">
           <a class="card-link" href="./tours/tour1.html">
             <img class="card-link__img"
@@ -125,7 +125,7 @@
       <section class="explore-wrapper dark-bg">
         <div class="explore container">
           <div class="explore__text-container">
-            <h2 class="explore__title title">Picture explore</h2>
+            <h2 class="explore__title title border-bottom">Picture explore</h2>
             <p class="explore__text">Las Meninas is a 1656 painting by Diego
               Velázquez, the leading artist of the Spanish Golden Age.</p>
             <p class="explore__text">It was cleaned in 1984 to remove a <span
@@ -213,6 +213,48 @@
           <div class="gallery__shadow"></div>
         </div>
       </section>
+      <section class="tickets container">
+        <h2 class="tickets__title title border-bottom">Buy tickets</h2>
+        <div class="tickets__container">
+          <img src="./assets/img/tickets.jpg" alt="tickets">
+          <form class="tickets__form" action="#">
+            <div class="form">
+              <div>
+                <p class="form__title">Ticket Type</p>
+                <input class="form__radio" type="radio" id="radio1"
+                  name="type_of_exhibition"
+                  checked>
+                <label class="form__label" for="radio1">Permanent exhibition</label><br>
+                <input class="form__radio" type="radio" id="radio2"
+                  name="type_of_exhibition">
+                <label class="form__label" for="radio2">Temporary exhibition</label><br>
+                <input class="form__radio" type="radio" id="radio3"
+                  name="type_of_exhibition">
+                <label class="form__label" for="radio3">Combined Admission</label>
+              </div>
+              <div class="form__container_right">
+                <p class="form__title form__title_right">Amount</p>
+                <p class="form__text">Basic 18+</p>
+                <div class="form__counter">
+                  <button onclick="this.nextElementSibling.stepDown()">-</button>
+                  <input type="text" name="basic18" value="1">
+                  <button onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+                <p class="form__text">Senior 65+</p>
+                <div class="form__counter">
+                  <button onclick="this.nextElementSibling.stepDown()">-</button>
+                  <input type="number" min="0" max="20" value="1" readonly
+                    name="senior65" value="1">
+                  <button onclick="this.previousElementSibling.stepUp()">+</button>
+                </div>
+                <p class="form__text_bolt">Total €</p>
+              </div>
+            </div>
+            <input class="form__submit" type="submit" value="Buy Now">
+          </form>
+        </div>
+      </section>
+      <div class="parallax"></div>
     </main>
     <footer class="footer dark-bg">
       <div class="footer__container container">
