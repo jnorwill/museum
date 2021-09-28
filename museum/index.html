@@ -16,15 +16,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet">
-      <script>console.log(`1.Вёрстка валидная +10
-        2.Вёрстка семантическая +24.(<header>, <main>, <footer>, семь <section>, 
-        только один <h1>, шесть <h3>, два <nav>, три списка ul > li > a,
-        тринадцать кнопок button, три input type="radio", два input type="number",
-        два input type="range", для всех <img> указанb alt)
-        3.Вёрстка соответствует макету +45
-        4.Форма покупки билетов +22
-        5.Требования к css +18
-        6.Интерактивность, реализуемая через css +25`)</script>
+      <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="header-wrapper dark-bg">
@@ -262,8 +254,9 @@
             <button class="form__submit">Buy Now</button>
           </form>
         </div>
-        <div class="booking-tickets-container">
+        <div class="booking-tickets-container none">
           <form class="booking-tickets" action="#">
+            <button class="booking-tickets__close"><img src="./assets/svg/close.svg" alt="close"></button>
             <div class="booking-tickets-container-left">
               <img src="./assets/svg/logo-beige.svg" alt="icon">
               <h2 class="booking-tickets__title">Booking tickets</h2>
@@ -378,7 +371,6 @@
               <button class="booking-tickets-overview__button">Book</button>
               </div>
             </div>
-            <img class="booking-tickets__close" src="./assets/svg/close.svg" alt="close">
           </form>
         </div>
       </section>
