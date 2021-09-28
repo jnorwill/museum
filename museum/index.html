@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="./compressed/css/style.min.css">
     <link rel="icon" href="./assets/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
       rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet">
-      <script src="./index.js" defer></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="header-wrapper dark-bg">
@@ -256,7 +256,8 @@
         </div>
         <div class="booking-tickets-container none">
           <form class="booking-tickets" action="#">
-            <button class="booking-tickets__close"><img src="./assets/svg/close.svg" alt="close"></button>
+            <img class="booking-tickets__close"
+                src="./assets/svg/close.svg" alt="close">
             <div class="booking-tickets-container-left">
               <img src="./assets/svg/logo-beige.svg" alt="icon">
               <h2 class="booking-tickets__title">Booking tickets</h2>
@@ -274,7 +275,7 @@
               <input class="booking-tickets__input booking-tickets__input_tel"
                 type="tel" placeholder="Phone">
               <select class="booking-tickets__input
-                booking-tickets__input_select" aria-placeholder="Ticket Type">
+                booking-tickets__input_select">
                 <option value="Permanent exhibition">Permanent exhibition</option>
                 <option value="Temporary exhibition">Temporary exhibition</option>
                 <option value="Combined Admission">Combined Admission</option>
@@ -368,7 +369,7 @@
                 </div>
               </div>
               <div class="booking-tickets-overview__button-container">
-              <button class="booking-tickets-overview__button">Book</button>
+                <button class="booking-tickets-overview__button">Book</button>
               </div>
             </div>
           </form>

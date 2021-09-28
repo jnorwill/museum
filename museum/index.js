@@ -7,11 +7,20 @@ console.log(`1.Вёрстка валидная +10
         4.Форма покупки билетов +22
         5.Требования к css +18
         6.Интерактивность, реализуемая через css +25`)
+const ticketsForm = document.querySelector('.tickets__form')
 const buttonClose = document.querySelector('.booking-tickets__close')
 const buttonOpen = document.querySelector('.form__submit')
-const elemContainer = document.querySelector('.booking-tickets-container')
-buttonClose.addEventListener('click', (event) => {elemContainer.classList.add('none');
-event.preventDefault();})
-buttonOpen.addEventListener('click', (event) => {elemContainer.classList.remove('none');
-event.preventDefault();})
-console.log('buttonOpen')
+const elemTicketContainer = document.querySelector('.booking-tickets-container')
+const elemTicketElem = document.querySelector('.booking-tickets')
+ticketsForm.addEventListener('submit', (event) => { event.preventDefault(); })
+elemTicketContainer.onclick = function (event) {
+        let target = event.target;
+        event.preventDefault();
+        if (target.classList.contains('booking-tickets__close')) {
+                elemTicketContainer.classList.add('none');
+        } else if (target.classList.contains('booking-tickets-container')) {
+                elemTicketContainer.classList.add('none');
+        }
+        else return
+}
+buttonOpen.addEventListener('click', (event) => { elemTicketContainer.classList.remove('none') });

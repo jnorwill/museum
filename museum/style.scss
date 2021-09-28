@@ -608,10 +608,12 @@ p {
     background: #9d8665;
   }
 }
-.none {
-  display: none;
+.booking-tickets-container.none {
+  transform: translateX(-100%);
 }
 .booking-tickets-container {
+  transition: 1s;
+  transform: translateX(0);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -939,7 +941,6 @@ p {
   transition: 0.5s;
 }
 .social-net__link:hover {
-  border: solid 1px #9d8665;
   filter: invert(58%) sepia(15%) saturate(710%) hue-rotate(356deg) brightness(150%) contrast(91%);
 }
 .youtube {
