@@ -160,8 +160,9 @@
             <button class="video-slider__player-button"><img src="./assets/svg/player.svg" alt="play"></button>
             <div class="video-slider__control video-slider-control">
               <button class="video-slider-control__button video-slider-control__button_play"></button>
+              <button class="video-slider-control__button video-slider-control__button_hidden-before video-slider-control__button_volume"></button>
               <input class="video-slider-control__range" type="range">
-              <button class="video-slider-control__button video-slider-control__button_volume"></button>
+              <button class="video-slider-control__button video-slider-control__button_hidden video-slider-control__button_volume"></button>
               <input class="video-slider-control__range-volume" type="range">
               <button class="video-slider-control__button video-slider-control__button_fullscreen"></button>
             </div>
@@ -177,7 +178,7 @@
               video player" allow="accelerometer; autoplay;
               clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
-            <iframe width="560" height="315"
+            <iframe class="video-slider__list_hidden" width="560" height="315"
               src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube
               video player" allow="accelerometer; autoplay;
               clipboard-write; encrypted-media; gyroscope; picture-in-picture"
