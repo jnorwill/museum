@@ -229,6 +229,7 @@ p {
     padding: 10px 0;
     border: none;
     transition: 0.5s;
+    background-size: contain;
   }
   &__arrow:hover {
     cursor: pointer;
@@ -927,7 +928,9 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
+.footer__navigation-hidden {
+  display: none;
+}
 .footer__navigation_margin {
   margin-bottom: 25px;
 }
@@ -1222,8 +1225,8 @@ p {
   }
   .slider {
     &__gallery_img {
-      width: 728px;
-      height: 546px;
+      width: 100%;
+      height: auto;
     }
     &__pagination {
       margin-top: 0;
@@ -1264,8 +1267,6 @@ p {
     }
     &__img-container {
       margin-top: 0;
-      width: 728px;
-      height: 705px;
     }
   }
   .video {
@@ -1349,15 +1350,15 @@ p {
   .booking-tickets-container {
     overflow: scroll;
   }
-  .booking-tickets{
+  .booking-tickets {
     flex-direction: column;
     max-width: 590px;
     box-sizing: border-box;
   }
-  .booking-tickets-container-left{
+  .booking-tickets-container-left {
     max-width: 100%;
   }
-  .booking-tickets-overview{
+  .booking-tickets-overview {
     max-width: 100%;
     margin-top: 50px;
   }
@@ -1394,5 +1395,235 @@ p {
   }
   .footer__white-stripe {
     margin: 40px 0;
+  }
+}
+@media (max-width: 750px) {
+  .explore__img-container {
+    margin-top: 20px;
+    height: 368px;
+    img {
+      width: 380px;
+      height: 368px;
+    }
+  }
+  .video-slider__list iframe {
+    width: 180px;
+    height: 101px;
+  }
+  .gallery {
+    height: 716px;
+    .gallery__list {
+      height: 1630px;
+      img {
+        width: 178px;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .logo {
+    width: 138px;
+    height: 32px;
+    &__img {
+      width: 29px;
+      height: 16px;
+      background-size: contain;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  .title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .welcome__title {
+    padding-top: 3px;
+  }
+  .welcome__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .slider {
+    &__pagination {
+      padding: 16px 75px 20px;
+    }
+    &__numbers {
+      font-size: 16px;
+      line-height: 40px;
+      width: 50px;
+    }
+    .squares__square {
+      width: 7px;
+      height: 7px;
+    }
+    &__squares {
+      width: 74px;
+    }
+    .slider__arrows {
+      width: 55px;
+    }
+  }
+  .slider__arrow {
+    width: 21px;
+  }
+  .card-link__title {
+    font-size: 18px;
+    line-height: 42px;
+    letter-spacing: 5px;
+  }
+  .card-link__big-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .card-link__big-text {
+    margin-bottom: 10px;
+  }
+  .visiting {
+    padding-bottom: 40px;
+  }
+  .visiting__title {
+    margin-bottom: 20px;
+  }
+  .explore__img-container {
+    margin-top: 0;
+  }
+  .video {
+    padding-top: 36px;
+    padding-bottom: 41px;
+  }
+  .video-slider__player {
+    height: 226px;
+  }
+  .video-slider__player-button img {
+    padding-bottom: 52px;
+    height: 50px;
+    width: 50px;
+  }
+  .video-slider__control {
+    padding: 0px 20px;
+  }
+  .video-slider-control__range {
+    width: 200px;
+  }
+  .video-slider-control__button {
+    height: 18px;
+    width: 18px;
+  }
+  .video-slider__list {
+    margin: 40px 0;
+  }
+  .video-slider-pagination {
+    width: 120px;
+  }
+  .video-slider-pagination__point {
+    width: 8px;
+    height: 8px;
+  }
+  .tickets__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tickets__img {
+    margin-bottom: 40px;
+    width: 380px;
+    height: 160px;
+  }
+  .form__title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+  .form__container_right {
+    text-align: center;
+  }
+  .tickets__form {
+    margin-right: 0;
+  }
+  .form__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .form__text {
+    margin: 20px 0 14px;
+  }
+  .form__text_bolt {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0px;
+    margin-top: 40px;
+  }
+  .form__submit {
+    font-size: 16px;
+  }
+  .booking-tickets {
+    max-width: 420px;
+  }
+  .booking-tickets__title{
+    font-size: 32px;
+line-height: 35px;
+  }
+  .booking-tickets-overview {
+    padding: 15px;
+  }
+  .card{
+    width: 330px;
+  }
+  .card-backside{
+    width: 330px;
+    position: static;
+    margin-top: 25px;
+  }
+  .contacts__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .contacts__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .contacts__map {
+    height: 248px;
+  }
+  .contacts {
+    padding-bottom: 40px;
+  }
+  .footer {
+    padding-top: 45px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .navigation__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .footer-navigation-container {
+    display: block;
+  }
+  .footer__navigation-open {
+    display: none;
+  }
+  .footer__navigation-hidden {
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigation__link {
+    padding: 10px 0;
+  }
+  .footer__navigation_margin {
+    margin-bottom: 30px;
+  }
+  .social-net {
+    margin: 40px auto 0;
+    width: 260px;
+    justify-content: space-between;
+  }
+  .social-net__link {
+    margin: 0;
+  }
+  .footer-text-hidden {
+    display: none;
   }
 }
