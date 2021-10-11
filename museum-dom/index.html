@@ -40,33 +40,36 @@
       </div>
       <div class="burger-menu">
         <ul class="navigation burger-menu__nav">
-            <li><a href="#visiting" class="navigation__link">Visiting</a></li>
-            <li><a href="#explore" class="navigation__link">Explore</a></li>
-            <li><a href="#video" class="navigation__link">Video</a></li>
-            <li><a href="#gallery" class="navigation__link">Gallery</a></li>
-            <li><a href="#tickets" class="navigation__link">Tickets</a></li>
-            <li><a href="#contacts" class="navigation__link">Contacts</a></li>
+          <li><a href="#visiting" class="navigation__link">Visiting</a></li>
+          <li><a href="#explore" class="navigation__link">Explore</a></li>
+          <li><a href="#video" class="navigation__link">Video</a></li>
+          <li><a href="#gallery" class="navigation__link">Gallery</a></li>
+          <li><a href="#tickets" class="navigation__link">Tickets</a></li>
+          <li><a href="#contacts" class="navigation__link">Contacts</a></li>
+        </ul>
+        <div class="burger-menu__img">
+          <img class="burger-menu__img_big"
+            src="./assets/img/burger-menu-img1.avif" alt="img">
+          <img class="burger-menu__img_little"
+            src="./assets/img/burger-menu-img2.avif" alt="img">
+          <img class="burger-menu__img_little"
+            src="./assets/img/burger-menu-img3.avif" alt="img">
+        </div>
+        <div class="burger-menu__line"></div>
+        <div>
+          <ul class="social-net burger-menu__social-net">
+            <li><a href="https://www.youtube.com/user/louvre"
+                class="social-net__link youtube"></a></li>
+            <li><a href="https://www.instagram.com/museelouvre/"
+                class="social-net__link instagram"></a></li>
+            <li><a href="https://www.facebook.com/museedulouvre"
+                class="social-net__link facebook"></a></li>
+            <li><a href="http://twitter.com/museelouvre"
+                class="social-net__link twitter"></a></li>
+            <li><a href="https://www.pinterest.fr/museedulouvre/"
+                class="social-net__link pinterest"></a></li>
           </ul>
-          <div class="burger-menu__img">
-            <img class="burger-menu__img_big" src="./assets/img/burger-menu-img1.avif" alt="img">
-            <img class="burger-menu__img_little" src="./assets/img/burger-menu-img2.avif" alt="img">
-            <img class="burger-menu__img_little" src="./assets/img/burger-menu-img3.avif" alt="img">
-          </div>
-          <div class="burger-menu__line"></div>
-          <div>
-            <ul class="social-net burger-menu__social-net">
-              <li><a href="https://www.youtube.com/user/louvre"
-                  class="social-net__link youtube"></a></li>
-              <li><a href="https://www.instagram.com/museelouvre/"
-                  class="social-net__link instagram"></a></li>
-              <li><a href="https://www.facebook.com/museedulouvre"
-                  class="social-net__link facebook"></a></li>
-              <li><a href="http://twitter.com/museelouvre"
-                  class="social-net__link twitter"></a></li>
-              <li><a href="https://www.pinterest.fr/museedulouvre/"
-                  class="social-net__link pinterest"></a></li>
-            </ul>
-          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -78,38 +81,45 @@
             <a href="./tours/tour7.html" class="welcome__button">Discover
               the Louvre</a>
           </div>
-          <div class="welcome__slider slider">
-            <div class="slider__gallery">
-              <div class="slider__gallery_shadow"></div>
-              <div>
-                <img class="slider__gallery_img" src="./assets/img/1.avif"
+          <div class="welcome__slider welcome-slider">
+            <div class="welcome-slider__gallery">
+              <div class="welcome-slider__gallery-container">
+                <img class="welcome-slider__gallery-slide"
+                  src="./assets/img/1.avif"
                   alt="Djokonda">
-                <img class="slider__gallery_img hidden" src="./assets/img/2.avif"
+                <img class="welcome-slider__gallery-slide"
+                  src="./assets/img/2.avif"
                   alt="">
-                <img class="slider__gallery_img hidden" src="./assets/img/3.avif"
+                <img class="welcome-slider__gallery-slide"
+                  src="./assets/img/3.avif"
                   alt="">
-                <img class="slider__gallery_img hidden" src="./assets/img/4.avif"
+                <img class="welcome-slider__gallery-slide"
+                  src="./assets/img/4.avif"
                   alt="">
-                <img class="slider__gallery_img hidden" src="./assets/img/5.avif"
+                <img class="welcome-slider__gallery-slide"
+                  src="./assets/img/5.avif"
                   alt="">
               </div>
             </div>
-            <div class="slider__pagination">
-              <div class="slider__numbers">
-                <div>01</div>
+            <div class="welcome-slider__pagination">
+              <div class="welcome-slider__numbers">
+                <div class="welcome-slider__numbers_current">01</div>
                 <div>|</div>
                 <div>05</div>
               </div>
-              <div class="slider__squares">
-                <div class="squares__square squares__square_beige"></div>
-                <div class="squares__square"></div>
-                <div class="squares__square"></div>
-                <div class="squares__square"></div>
-                <div class="squares__square"></div>
+              <div class="welcome-slider__squares">
+                <div class="squares__square squares__square_beige"
+                  data-number="1"></div>
+                <div class="squares__square" data-number="2"></div>
+                <div class="squares__square" data-number="3"></div>
+                <div class="squares__square" data-number="4"></div>
+                <div class="squares__square" data-number="5"></div>
               </div>
-              <div class="slider__arrows">
-                <button class="slider__arrow"></button>
-                <button class="slider__arrow slider__arrow_right"></button>
+              <div class="welcome-slider__arrows">
+                <button class="welcome-slider__arrow
+                  welcome-slider__arrow_left"></button>
+                <button class="welcome-slider__arrow
+                  welcome-slider__arrow_right"></button>
               </div>
             </div>
           </div>
@@ -155,7 +165,8 @@
             <p class="card-link__text">Google Street Panorama View</p>
           </a>
           <a class="card-link" href="./tours/tour2.html">
-            <img class="card-link__img" src="./assets/img/night-palace-tour.avif"
+            <img class="card-link__img"
+              src="./assets/img/night-palace-tour.avif"
               alt="Night
               Palace">
             <h3 class="card-link__title">Night Palace</h3>
@@ -194,51 +205,75 @@
             Hammurabi's Code</p>
         </div>
         <div class="video__video-slider video-slider">
-          <div class="video-slider__player">
-            <button class="video-slider__player-button"><img
-                src="./assets/svg/player.svg" alt="play"></button>
-            <div class="video-slider__control video-slider-control">
-              <button class="video-slider-control__button
-                video-slider-control__button_play"></button>
-              <button class="video-slider-control__button
-                video-slider-control__button_hidden-before
-                video-slider-control__button_volume"></button>
-              <input class="video-slider-control__range" type="range">
-              <button class="video-slider-control__button
-                video-slider-control__button_hidden
-                video-slider-control__button_volume"></button>
-              <input class="video-slider-control__range-volume" type="range">
-              <button class="video-slider-control__button
-                video-slider-control__button_fullscreen"></button>
+          <div class="video-slider__player-container">
+            <video id="slider-player" class="video-slider__player"></video>
+            <button class="video-slider__center-play"><img
+                src="./assets/svg/player.svg" alt="play">
+            </button>
+            <div class="video-slider__button-container">
+              <button class="video-slider__button_play video-slider__button"></button>
+              <div class="video-slider__line_time range">
+                <div class="range__current-line range__current-line_time">
+                  <div class="range__current-point"></div>
+                </div>
+              </div>
+              <button class="video-slider__button_volume video-slider__button"></button>
+              <div class="video-slider__line_volume range">
+                <div class="range__current-line range__current-line_volume">
+                  <div class="range__current-point"></div>
+                </div>
+              </div>
+              <button class="video-slider__button_fullscreen
+                video-slider__button"></button>
             </div>
           </div>
           <div class="video-slider__list">
-            <iframe width="560" height="315"
-              src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube
-              video player" allow="accelerometer; autoplay;
-              clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <iframe class="video-slider__list_hidden2" width="560" height="315"
-              src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube
-              video player" allow="accelerometer; autoplay;
-              clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            <iframe class="video-slider__list_hidden" width="560" height="315"
-              src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube
-              video player" allow="accelerometer; autoplay;
-              clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+            <div class="video-slider__list-container">
+              <iframe class="video-slider__list-slide" width="560" height="315"
+                src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube
+                video player" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <iframe class="video-slider__list-slide" width="560" height="315"
+                src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube
+                video player" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <iframe class="video-slider__list-slide"
+                width="560" height="315"
+                src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube
+                video player" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <iframe class="video-slider__list-slide"
+                width="560" height="315"
+                src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube
+                video player" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+              <iframe class="video-slider__list-slide" width="560" height="315"
+                src="https://www.youtube.com/embed/2OR0OCr6uRE" title="YouTube
+                video player" allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="video-slider__list-slide
+                video-slider__list-slide-main" width="560" height="315"
+                src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube
+                video player" allow="accelerometer; autoplay;
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
           </div>
           <div class="video-slider__pagination video-slider-pagination">
             <div class="video-slider-pagination__point
-              video-slider-pagination__point_selected"></div>
-            <div class="video-slider-pagination__point"></div>
-            <div class="video-slider-pagination__point"></div>
-            <div class="video-slider-pagination__point"></div>
-            <div class="video-slider-pagination__point"></div>
+              video-slider-pagination__point_selected" data-video="1"></div>
+            <div class="video-slider-pagination__point" data-video="2"></div>
+            <div class="video-slider-pagination__point" data-video="3"></div>
+            <div class="video-slider-pagination__point" data-video="4"></div>
+            <div class="video-slider-pagination__point" data-video="5"></div>
             <button class="video-slider-pagination__arrow
               video-slider-pagination__arrow_left"></button>
-            <button class="video-slider-pagination__arrow"></button>
+            <button class="video-slider-pagination__arrow
+              video-slider-pagination__arrow_right"></button>
           </div>
         </div>
       </section>
@@ -476,26 +511,26 @@
           <ul class="footer__navigation-hidden">
             <li>
               <ul>
-              <li class="footer__navigation_margin"><a href="#visiting"
-                  class="navigation__link">Visiting</a></li>
-              <li><a href="#explore"
-                  class="navigation__link">Explore</a></li>
-            </ul>
+                <li class="footer__navigation_margin"><a href="#visiting"
+                    class="navigation__link">Visiting</a></li>
+                <li><a href="#explore"
+                    class="navigation__link">Explore</a></li>
+              </ul>
             </li>
             <li>
               <ul>
-              <li class="footer__navigation_margin"><a href="#video"
-                  class="navigation__link">Video</a></li>
-              <li><a href="#gallery"
-                  class="navigation__link">Gallery</a></li>
-            </ul>
+                <li class="footer__navigation_margin"><a href="#video"
+                    class="navigation__link">Video</a></li>
+                <li><a href="#gallery"
+                    class="navigation__link">Gallery</a></li>
+              </ul>
             </li>
             <li>
               <ul>
-              <li class="footer__navigation_margin"><a href="#tickets"
-                  class="navigation__link">Tickets</a></li>
-              <li><a href="#contacts" class="navigation__link">Contacts</a></li>
-            </ul>
+                <li class="footer__navigation_margin"><a href="#tickets"
+                    class="navigation__link">Tickets</a></li>
+                <li><a href="#contacts" class="navigation__link">Contacts</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
