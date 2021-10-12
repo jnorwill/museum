@@ -81,6 +81,27 @@ welcomeSliderSquares.addEventListener('click', (event) => {
   }
 
 })
+
+const sliderExplore = document.querySelector('.explore-slider')
+const sliderExploreFilter = document.querySelector('.explore-slider__filter')
+const sliderExploreButton = document.querySelector('.explore-slider__filter-circle')
+
+const moveFilter = (event) => {
+  const widthAll = sliderExplore.offsetWidth
+  const currentWidth = event.pageX - Math.round(sliderExplore.getBoundingClientRect().left)
+  sliderExploreFilter.style.width = `${currentWidth * 100 / widthAll}%`
+console.log(widthAll, event.pageX, currentWidth)
+
+}
+
+
+sliderExploreButton.addEventListener('mousedown', () => {
+  document.addEventListener('mousemove', moveFilter)
+})
+document.addEventListener('mouseup', () => {
+  document.removeEventListener('mousemove', moveFilter)
+})
+
 const sliderVideoCenterButtonPlay = document.querySelector('.video-slider__center-play')
 const sliderVideoButtonPlay = document.querySelector('.video-slider__button_play')
 const sliderVideoAllTime = document.querySelector('.video-slider__line_time')
