@@ -83,8 +83,8 @@ welcomeSliderSquares.addEventListener('click', (event) => {
 })
 const sliderVideoCenterButtonPlay = document.querySelector('.video-slider__center-play')
 const sliderVideoButtonPlay = document.querySelector('.video-slider__button_play')
-// const sliderVideoPagination = document.querySelector('.video-slider__line_time')
-// const sliderVideoCurrentTime = document.querySelector('.range__current-line_time')
+const sliderVideoAllTime = document.querySelector('.video-slider__line_time')
+const sliderVideoCurrentTime = document.querySelector('.range__current-line_time')
 const sliderVideoButtonFullscreen = document.querySelector('.video-slider__button_fullscreen')
 const sliderVideoButtonVolume = document.querySelector('.video-slider__button_volume')
 const sliderVideoAllVolume = document.querySelector('.video-slider__line_volume')
@@ -100,15 +100,32 @@ tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 let player;
+let id
+let videoSrc = 'zp1BXPX8jcU'
 function onYouTubeIframeAPIReady() {
+  player?.destroy()
   player = new YT.Player('slider-player', {
-    videoId: 'Vi5D6FKhRmo',
+    videoId: videoSrc,
     playerVars: {
       'autoplay': 0,
       'controls': 0,
       'rel': 0,
       'fs': 0,
-    }
+    },
+    events: {
+      
+      'onStateChange': (element) => {
+        if (id) {
+          clearInterval(id)
+        }
+
+        if (element.data === 1) {
+          id = setInterval(() => {
+            moveTime()
+          }, 1000)
+        }
+      }
+    },
   });
 }
 
@@ -133,27 +150,77 @@ sliderVideoCenterButtonPlay.addEventListener('click', (event) => {
   }
 })
 
-const muveVolume = (event) => {
-  const elemWidth = event.pageX - Math.round(sliderVideoCurrentVolume.getBoundingClientRect().left)
-    sliderVideoCurrentVolume.style.width = `${elemWidth}px`
-    if (elemWidth === 0) {
-      sliderVideoButtonVolume.classList.add('video-slider__button_volume-focus')
-    }
+const changeVolume = (event) => {
+  const elemWidth = Math.round((event.pageX - Math.round(sliderVideoCurrentVolume.getBoundingClientRect().left)) * 100 / sliderVideoAllVolume.offsetWidth)
+  sliderVideoCurrentVolume.style.width = `${elemWidth}%`
+  player.setVolume(elemWidth)
+  console.log(elemWidth)
+  if (elemWidth <= 0) {
+    sliderVideoButtonVolume.classList.add('video-slider__button_volume-focus')
+  } else if (elemWidth > 0) {
+    console.log(elemWidth, sliderVideoButtonVolume.classList)
+    sliderVideoButtonVolume.classList.remove('video-slider__button_volume-focus')
   }
+}
+
+const moveTime = (desiredTime) => {
+  const allTime = Math.round(player.getDuration())
+  const currentTime = desiredTime || Math.round(player.getCurrentTime())
+  console.log(allTime, currentTime,)
+
+  sliderVideoCurrentTime.style.width = `${(currentTime * 100 / allTime)}%`
+  if (currentTime >= allTime) {
+    player.stopVideo()
+    sliderVideoButtonPlay.classList.remove('video-slider__button_play-focus')
+    sliderVideoCenterButtonPlay.style.display = 'block'
+  }
+}
+const changeTime = (event, isittrue) => {
+  const elemWidth = (event.pageX - Math.round(sliderVideoCurrentTime.getBoundingClientRect().left))
+  const allWidth = sliderVideoAllTime.offsetWidth
+  const allTime = player.getDuration()
+  const desiredTime = Math.round(allTime * elemWidth / allWidth)
+  console.log(elemWidth, desiredTime,)
+
+  player.seekTo(desiredTime, isittrue)
+
+  moveTime(desiredTime)
+}
+const changeTimeWithMouseMove = (event) => changeTime(event, false)
+
+
+
+let timeDown = false
+let volumeDown = false
 sliderVideoAllVolume.addEventListener('mousedown', () => {
-  document.addEventListener('mousemove', muveVolume)
+  volumeDown = true
+  document.addEventListener('mousemove', changeVolume)
+})
+sliderVideoAllTime.addEventListener('mousedown', () => {
+  timeDown = true
+  document.addEventListener('mousemove', changeTimeWithMouseMove)
 })
 
-document.addEventListener('mouseup', () => {
-  document.removeEventListener('mousemove', muveVolume)
+document.addEventListener('mouseup', (event) => {
+  if (timeDown) {
+    changeTime(event, true)
+  }
+  volumeDown = false
+  timeDown = false
+
+  document.removeEventListener('mousemove', changeVolume)
+  document.removeEventListener('mousemove', changeTimeWithMouseMove)
 })
 
-sliderVideoButtonVolume.addEventListener('click', () => {
+
+sliderVideoButtonVolume.addEventListener('click', (e) => {
+  e.preventDefault()
+  e.stopPropagation()
   if (sliderVideoButtonVolume.classList.contains('video-slider__button_volume-focus')) {
-    player.unMute()
+    player.setVolume(100)
     sliderVideoButtonVolume.classList.remove('video-slider__button_volume-focus')
   } else {
-    player.mute()
+    player.setVolume(0)
     sliderVideoButtonVolume.classList.add('video-slider__button_volume-focus')
   }
 })
@@ -167,6 +234,11 @@ const slideMarginRight = parseFloat(getComputedStyle(document.querySelector('.vi
 let n = 1
 sliderVideoSlideContainer.style.transform = `translateX(-${(slideWidth + slideMarginRight)}px)`
 const moveVideoPoint = () => {
+  
+  videoSrc = sliderVideoSlideArr[n-1].dataset.src
+  console.log(n, videoSrc)
+  onYouTubeIframeAPIReady()
+
   sliderVideoSlideContainer.style.transform = `translateX(-${(slideWidth + slideMarginRight) * n}px)`
 
   const sliderVideoPointSelected = document.querySelector('.video-slider-pagination__point_selected')
@@ -185,14 +257,12 @@ sliderVideoArrowRight.addEventListener('click', () => {
     n = 1
   }
   moveVideoPoint()
-  console.log(n)
 })
 sliderVideoArrowLeft.addEventListener('click', () => {
   n--
   if (n === 0) {
     n = sliderVideoSlideArr.length - 1
   }
-  console.log(n)
   moveVideoPoint()
 })
 const sliderVideoPagination = document.querySelector('.video-slider-pagination')
@@ -201,9 +271,5 @@ sliderVideoPagination.addEventListener('click', (event) => {
   if (index > 0) {
     n = index
     moveVideoPoint()
-
   }
 })
-
-
-
